@@ -14,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     display: inline-block;
+    background-color: #FFFFFF
 }
 
 @font-face {
@@ -100,7 +101,7 @@ img {
     width: 100%;
     margin: 0;
     padding: 0;
-    display: block;
+    display: block
 }
 
 .secdiv {
@@ -108,18 +109,15 @@ img {
     margin: 0;
     padding: 0;
     display: inline-block;
-    width: 100%;
+    width: 100%
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none
 }
 
-
-/*- Header -*/
-
 .nav-toggle {
-    display: none;
+    display: none
 }
 
 nav ul {
@@ -128,7 +126,7 @@ nav ul {
     display: inline-block;
     width: max-content;
     text-align: right;
-    float: right;
+    float: right
 }
 
 nav ul li {
@@ -137,7 +135,7 @@ nav ul li {
     display: inline-block;
     line-height: 55px;
     margin: 0 16px;
-    position: relative;
+    position: relative
 }
 
 nav ul li a {
@@ -147,11 +145,11 @@ nav ul li a {
     display: block;
     transition: color .2s linear, background .2s linear;
     text-transform: uppercase;
-    font-family: var(--font-family-regular);
+    font-family: var(--font-family-regular)
 }
 
 nav ul li ul {
-    display: none;
+    display: none
 }
 
 a.logo {
@@ -159,32 +157,32 @@ a.logo {
     margin: 0;
     padding: 0;
     height: 55px;
-    display: inline-block;
+    display: inline-block
 }
 
 nav ul li a span {
     font-size: 14px;
     font-family: 'Font Awesome 5 Free';
-    margin-left: 5px;
+    margin-left: 5px
 }
 
 a.logo img {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    display: block;
+    display: block
 }
 
 header.secdiv {
     display: block;
     padding: 5px 0px;
-    z-index: 999;
+    z-index: 999
 }
 
 nav ul li:hover>ul {
     display: inline-block;
     position: absolute;
-    top: 100%;
+    top: 100%
 }
 
 nav ul li ul {
@@ -201,11 +199,11 @@ nav ul li ul {
     width: 250px;
     padding: 10px 0px;
     z-index: 2;
-    left: -20px;
+    left: -20px
 }
 
 nav ul li ul li:last-child {
-    border-bottom: unset;
+    border-bottom: unset
 }
 
 nav ul li ul li {
@@ -215,7 +213,7 @@ nav ul li ul li {
     margin: 0;
     padding: 5px 15px;
     border-bottom: 1px solid #f2f2f2;
-    line-height: 20px;
+    line-height: 20px
 }
 
 nav ul li ul li a {
@@ -229,7 +227,7 @@ nav ul li ul li a {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    line-height: 20px;
+    line-height: 20px
 }
 
 nav ul li ul li a span {
@@ -237,11 +235,8 @@ nav ul li ul li a span {
     position: relative;
     margin: 0px 0px;
     margin-right: 10px;
-    transition: 0.5s all linear;
+    transition: 0.5s all linear
 }
-
-
-/*- slider  -*/
 
 .slider {
     position: relative;
@@ -249,7 +244,7 @@ nav ul li ul li a span {
     padding: 0;
     display: inline-block;
     overflow: hidden;
-    width: 100%;
+    width: 100%
 }
 
 #hero-slider {
@@ -257,7 +252,7 @@ nav ul li ul li a span {
     margin: 0;
     padding: 0;
     width: 100%;
-    display: inline-block;
+    display: inline-block
 }
 
 .slider .banrcntprd {
@@ -269,7 +264,7 @@ nav ul li ul li a span {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: center
 }
 
 .slider .banrcntprd span {
@@ -277,7 +272,7 @@ nav ul li ul li a span {
     display: block;
     color: #000;
     line-height: 40px;
-    font-family: 'latoregular', Arial, Helvetica;
+    font-family: 'latoregular', Arial, Helvetica
 }
 
 .slider .banrcntprd h2 {
@@ -289,7 +284,7 @@ nav ul li ul li a span {
     margin: 0;
     font-family: var(--font-family-bold);
     font-weight: 800;
-    padding: 10px 0px;
+    padding: 10px 0px
 }
 
 .slider .banrcntprd h3 {
@@ -300,7 +295,7 @@ nav ul li ul li a span {
     font-style: normal;
     font-family: var(--font-family-light);
     display: block;
-    font-weight: 800;
+    font-weight: 800
 }
 
 #hero-slider .owl-dots {
@@ -310,7 +305,7 @@ nav ul li ul li a span {
     right: 0;
     margin: 0 auto;
     width: max-content;
-    display: none;
+    display: none
 }
 
 #hero-slider .owl-nav {
@@ -320,7 +315,7 @@ nav ul li ul li a span {
     height: 100%;
     width: 100%;
     display: contents;
-    top: 0;
+    top: 0
 }
 
 #hero-slider .owl-nav button {
@@ -330,35 +325,32 @@ nav ul li ul li a span {
     width: 25px;
     height: 50px;
     background: #ededed;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .owl-nav button.owl-next {
-    right: 0;
+    right: 0
 }
 
 #hero-slider .owl-nav button.owl-prev {
-    left: 0;
+    left: 0
 }
 
 #hero-slider .owl-nav button.owl-next {
-    right: 0;
+    right: 0
 }
 
 .slider .banrcntprd img {
     object-fit: cover;
     object-position: center;
     width: 100%;
-    display: block;
+    display: block
 }
-
-
-/*--.widget-textArea--*/
 
 .widget-textArea {
     padding: 50px 0px 50px;
     margin: 0px;
-    background: #f2f2f2;
+    background: #f2f2f2
 }
 
 .widget-heading {
@@ -368,14 +360,14 @@ nav ul li ul li a span {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: center
 }
 
 .widget-heading h3 {
     margin-bottom: 10px;
     font-weight: 800;
     font-size: 16px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.3px
 }
 
 .widget-heading h2 {
@@ -383,7 +375,7 @@ nav ul li ul li a span {
     letter-spacing: -1px;
     font-weight: 700;
     margin: 0px;
-    line-height: 60px;
+    line-height: 60px
 }
 
 .widget-heading h2 span {
@@ -391,31 +383,31 @@ nav ul li ul li a span {
     font-weight: 400;
     font-style: italic;
     font-size: 48px;
-    letter-spacing: -1px;
+    letter-spacing: -1px
 }
 
 .widget-textArea .widget-list {
     margin: 0px;
     padding: 0px;
-    width: 100%;
+    width: 100%
 }
 
 .widget-textArea .widget-list p {
     font-size: 16px;
     line-height: 33px;
     font-family: hero-new, sans-serif;
-    padding-bottom: 10px;
+    padding-bottom: 10px
 }
 
 .widget-textArea .widget-list p b {
-    font-weight: 700;
+    font-weight: 700
 }
 
 .widget-textArea .widget-number {
     margin: 0px auto;
     width: 100%;
     display: flex;
-    text-align: center;
+    text-align: center
 }
 
 .widget-textArea .widget-number h3 {
@@ -423,7 +415,7 @@ nav ul li ul li a span {
     font-weight: 800;
     font-size: 25px;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 .widget-textArea .widget-number p {
@@ -431,39 +423,36 @@ nav ul li ul li a span {
     font-weight: 600;
     color: #504f4f;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
-
-
-/*-- srvices --*/
 
 .services_Sec .tabs-left,
 .services_Sec .tabs-right {
-    border-bottom: none;
+    border-bottom: none
 }
 
 .services_Sec .tabs-left {
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #ddd
 }
 
 .services_Sec .tabs-right {
-    border-left: 1px solid #ddd;
+    border-left: 1px solid #ddd
 }
 
 .services_Sec .tabs-left>li,
 .services_Sec .tabs-right>li {
     float: none;
     margin-bottom: 0px;
-    transition: 0.5s all linear;
+    transition: 0.5s all linear
 }
 
 .services_Sec .tabs-left>li {
     margin-right: -1px;
-    transition: 0.5s all linear;
+    transition: 0.5s all linear
 }
 
 .services_Sec .tabs-right>li {
-    margin-left: -1px;
+    margin-left: -1px
 }
 
 .services_Sec .tabs-left>li.active>a,
@@ -471,26 +460,26 @@ nav ul li ul li a span {
 .services_Sec .tabs-left>li.active>a:focus {
     border-bottom-color: #ddd;
     border-right-color: transparent;
-    transition: 0.5s all linear;
+    transition: 0.5s all linear
 }
 
 .services_Sec .tabs-right>li.active>a,
 .services_Sec .tabs-right>li.active>a:hover,
 .services_Sec .tabs-right>li.active>a:focus {
     border-bottom: 1px solid #ddd;
-    border-left-color: transparent;
+    border-left-color: transparent
 }
 
 .services_Sec .tabs-left>li>a {
     border-radius: 4px 0 0 4px;
     margin-right: 0;
     display: block;
-    transition: 0.5s all linear;
+    transition: 0.5s all linear
 }
 
 .services_Sec .tabs-right>li>a {
     border-radius: 0 4px 4px 0;
-    margin-right: 0;
+    margin-right: 0
 }
 
 .tab-content .tab-pane li {
@@ -499,12 +488,12 @@ nav ul li ul li a span {
     font-weight: 600;
     color: #000;
     line-height: 35px;
-    border-bottom: unset;
+    border-bottom: unset
 }
 
 .tab-content .tab-pane ul {
     padding-left: 30px;
-    padding: 0px 25px 0px;
+    padding: 0px 25px 0px
 }
 
 .services_Sec ul {
@@ -513,12 +502,12 @@ nav ul li ul li a span {
     display: inline-block;
     padding: 20px 0px;
     border-radius: 4px;
-    background: #fff;
+    background: #fff
 }
 
 .services_Sec {
     background: #f2f2f2;
-    padding: 30px 0px;
+    padding: 30px 0px
 }
 
 .services_Sec ul li {
@@ -526,7 +515,7 @@ nav ul li ul li a span {
     margin: 0;
     padding: 0px 20px;
     border-bottom: 1px solid #f2f2f2;
-    transition: 0.5s all linear;
+    transition: 0.5s all linear
 }
 
 .services_Sec ul li a {
@@ -536,21 +525,21 @@ nav ul li ul li a span {
     font-family: 'Roboto';
     font-weight: 500;
     line-height: 40px;
-    transition: 0.5s all linear;
+    transition: 0.5s all linear
 }
 
 .services_Sec .tabs-left>li.active {
     background: #92bb3d;
     transition: 0.5s all linear;
     border-left: 2px solid #000;
-    border-right: 2px solid #000;
+    border-right: 2px solid #000
 }
 
 .services_Sec .tabs-left>li.active a {
     color: #000;
     padding-left: 5px;
     font-size: 15px;
-    transition: 0.5s all linear;
+    transition: 0.5s all linear
 }
 
 .tab-content {
@@ -559,28 +548,28 @@ nav ul li ul li a span {
     width: 100%;
     background: #ffff;
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .tab-content h3 {
     font-size: 20px;
     font-weight: 700;
     color: #000;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .tab-content p {
     font-size: 16px;
     line-height: 30px;
     font-family: hero-new, sans-serif;
-    padding-bottom: 20px;
+    padding-bottom: 20px
 }
 
 .tab-content img {
     width: 100%;
     margin: 0 auto;
     display: block;
-    position: relative;
+    position: relative
 }
 
 .tab-content .imgbox {
@@ -588,17 +577,14 @@ nav ul li ul li a span {
     margin: 0;
     position: relative;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 20px
 }
-
-
-/*-- parther --*/
 
 .parthneranddivier {
     position: relative;
     margin: 0;
     padding: 15px 0px;
-    background: #1a1348;
+    background: #1a1348
 }
 
 .parthneranddivier h3 {
@@ -608,7 +594,7 @@ nav ul li ul li a span {
     font-size: 15px;
     line-height: 25px;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 
 .parthneranddivier h4 {
@@ -618,7 +604,7 @@ nav ul li ul li a span {
     font-size: 45px;
     font-weight: bold;
     line-height: 35px;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 .parthneranddivier p {
@@ -626,16 +612,13 @@ nav ul li ul li a span {
     float: left;
     font-size: 14px;
     margin-bottom: 0;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.5px
 }
-
-
-/*--.custom-software --*/
 
 .custom-software {
     position: relative;
     padding: 50px 0px 50px;
-    margin: 0;
+    margin: 0
 }
 
 .custom-software h2,
@@ -645,7 +628,7 @@ nav ul li ul li a span {
     font-weight: 700;
     margin: 0px 0px 30px;
     text-align: center;
-    color: #000;
+    color: #000
 }
 
 .custom-software p {
@@ -657,13 +640,13 @@ nav ul li ul li a span {
     font-family: 'latoregular';
     width: 80%;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
 .custom-software ul {
     width: 100%;
     display: flex;
-    gap: 10px;
+    gap: 10px
 }
 
 .custom-software ul li {
@@ -677,36 +660,37 @@ nav ul li ul li a span {
     box-shadow: 0px 0px 10px #00000014;
     background: #fff;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .custom-software ul li a {
     color: #565656;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .custom-software ul li a img {
     height: 70px;
     object-fit: contain;
-    margin: 20px 0px 0px;
+    margin: 20px 0px 0px
 }
 
-.custom-software ul li a h6 {
+.custom-software ul li a h2 {
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.3px;
     line-height: 20px;
     margin: 25px auto;
+    color: #222
 }
 
 .custom-software ul li:hover {
     background: radial-gradient(#ffffff, #f2f2f2);
     box-shadow: 0 9px 59.8px 5.2px rgb(0 0 0 / 13%);
-    color: #fff;
+    color: #fff
 }
 
 .custom-software ul li a:hover {
-    color: #fff;
+    color: #fff
 }
 
 .parthneranddivier .item {
@@ -714,7 +698,7 @@ nav ul li ul li a span {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 .parthnamerlogo,
@@ -723,24 +707,24 @@ nav ul li ul li a span {
 .parthnamerlogo .owl-stage-outer .owl-item,
 .parthnamerlogo .owl-stage-outer .item,
 .parthnamerlogo .owl-stage-outer .parthlogo {
-    height: 100%;
+    height: 100%
 }
 
 .parthnamerlogo .owl-stage-outer .parthlogo img {
     height: 100%;
     object-fit: contain;
-    width: 100%;
+    width: 100%
 }
 
 .parthnamerlogo .owl-stage-outer .item .parthlogo {
     border: 1px solid #110942;
     border-right: unset;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .aboutus {
     padding: 50px 0px;
-    position: relative;
+    position: relative
 }
 
 .aboutus h3 {
@@ -749,7 +733,7 @@ nav ul li ul li a span {
     text-transform: uppercase;
     display: block;
     margin-bottom: 5px;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .aboutus h4 {
@@ -758,7 +742,7 @@ nav ul li ul li a span {
     font-weight: 700;
     margin-top: 10px;
     color: #212121;
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
 
 .aboutus p {
@@ -767,7 +751,7 @@ nav ul li ul li a span {
     margin: 15px 0 0;
     font-weight: 400;
     color: #222;
-    text-align: justify;
+    text-align: justify
 }
 
 .aboutus a {
@@ -780,7 +764,7 @@ nav ul li ul li a span {
     width: max-content;
     margin-top: 30px;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.5px
 }
 
 .aboutus form {
@@ -794,35 +778,35 @@ nav ul li ul li a span {
     float: right;
     position: sticky;
     z-index: 9;
-    top: 30px;
+    top: 30px
 }
 
 .aboutus h5 {
     margin-top: 20px;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .text-are {
     position: relative;
     margin: 0;
-    padding-right: 30px;
+    padding-right: 30px
 }
 
 .aboutus form h4 {
     margin-bottom: 30px;
     font-size: 30px;
-    padding-left: 0;
+    padding-left: 0
 }
 
 .aboutus form .from-sectiona {
     position: relative;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 .aboutus .form-group {
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .aboutus .form-group label {
@@ -832,7 +816,7 @@ nav ul li ul li a span {
     display: inline-block;
     font-family: var(--font-family-medium);
     font-weight: 400;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 .aboutus .form-group .form-control {
@@ -847,13 +831,13 @@ nav ul li ul li a span {
     font-weight: 400;
     height: 45px;
     border: 1px solid #c9c8c8;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .aboutus .form-group textarea {
     height: 150px !important;
     font-size: 18px;
-    padding: 15px 10px !important;
+    padding: 15px 10px !important
 }
 
 .aboutus .btnsection button {
@@ -868,35 +852,32 @@ nav ul li ul li a span {
     position: relative;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .aboutus .btnsection button i {
     font-size: 35px;
     font-weight: 600;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 .aboutus .btnsection {
     position: absolute;
     bottom: 10px;
-    right: 20px;
+    right: 20px
 }
 
 .coutsection {
     border-right: 2px solid #222;
     margin: 0;
     padding: 10px 0px;
-    background: #fff;
+    background: #fff
 }
 
 .widget-textArea .widget-number .col-md-4:first-child .coutsection {
-    border-left: 2px solid #222;
+    border-left: 2px solid #222
 }
-
-
-/*-- prices section --*/
 
 .tab-section {
     position: relative;
@@ -910,7 +891,7 @@ nav ul li ul li a span {
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .box-price {
@@ -927,27 +908,27 @@ nav ul li ul li a span {
     background: #211b1b url("../Images/footer-bg.webp");
     background-blend-mode: multiply;
     transition: all 0.3s ease-in-out;
-    height: 550px;
+    height: 550px
 }
 
 @keyframes animate {
     0% {
-        background-position: 0 0;
+        background-position: 0 0
     }
     20% {
-        background-position: 0 -44px;
+        background-position: 0 -44px
     }
     40% {
-        background-position: 0 -80px;
+        background-position: 0 -80px
     }
     60% {
-        background-position: 0 -100px;
+        background-position: 0 -100px
     }
     80% {
-        background-position: 0 -60px;
+        background-position: 0 -60px
     }
     100% {
-        background-position: 0 0;
+        background-position: 0 0
     }
 }
 
@@ -959,7 +940,7 @@ nav ul li ul li a span {
     width: 100%;
     height: 100%;
     transition: all 0.3s ease-in-out;
-    fill: transparent;
+    fill: transparent
 }
 
 .box-price svg rect {
@@ -970,20 +951,20 @@ nav ul li ul li a span {
     width: 100%;
     height: 100%;
     display: inline-flex;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 @keyframes boderline {
     0% {
-        stroke-dashoffset: 800;
+        stroke-dashoffset: 800
     }
     100% {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 0
     }
 }
 
 section.price-tab .box-price:hover svg {
-    display: none;
+    display: none
 }
 
 .box-title {
@@ -991,7 +972,7 @@ section.price-tab .box-price:hover svg {
     margin: 0;
     padding: 0;
     width: 100%;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .box-price .box-title h4 {
@@ -1007,7 +988,7 @@ section.price-tab .box-price:hover svg {
     width: 100%;
     height: 100%;
     display: block;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .box-price h4 {
@@ -1022,7 +1003,7 @@ section.price-tab .box-price:hover svg {
     font-size: 20px;
     margin-bottom: 15px;
     line-height: 30px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .box-price h3 {
@@ -1040,7 +1021,7 @@ section.price-tab .box-price:hover svg {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .box-price h3 sup {
@@ -1051,14 +1032,14 @@ section.price-tab .box-price:hover svg {
     font-size: 25px;
     line-height: 1;
     transition: all 0.3s ease-in-out;
-    margin-right: 5px;
+    margin-right: 5px
 }
 
 .box-price h3 span {
     margin: 0;
     padding: 0;
     width: max-content;
-    text-align: left;
+    text-align: left
 }
 
 .box-price h3 sub {
@@ -1069,10 +1050,10 @@ section.price-tab .box-price:hover svg {
     font-size: 20px;
     line-height: 1;
     text-transform: initial;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
-.box-price h5 {
+.box-price h2 {
     text-align: left;
     margin: 0px 0px 20px;
     padding: 0;
@@ -1082,7 +1063,7 @@ section.price-tab .box-price:hover svg {
     margin-top: 10px;
     width: max-content;
     display: inline-block;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .box-price span.featured {
@@ -1098,7 +1079,7 @@ section.price-tab .box-price:hover svg {
     color: #fff;
     box-shadow: 0 0 10px #040404;
     font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .box-price .pakes-area {
@@ -1113,14 +1094,14 @@ section.price-tab .box-price:hover svg {
     height: auto;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
-    overflow-y: auto;
+    overflow-y: auto
 }
 
 .box-price .pakes-area ul {
     margin: 0;
     text-align: left;
     color: #fff;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .box-price .pakes-area ul li {
@@ -1132,7 +1113,7 @@ section.price-tab .box-price:hover svg {
     font-weight: 500;
     line-height: 25px;
     transition: all 0.3s ease-in-out;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 .btn-section {
@@ -1148,7 +1129,7 @@ section.price-tab .box-price:hover svg {
     visibility: hidden;
     transition: all 0.3s ease-in-out;
     opacity: 0;
-    transform: translateY(200%);
+    transform: translateY(200%)
 }
 
 .btn-section a {
@@ -1163,7 +1144,7 @@ section.price-tab .box-price:hover svg {
     color: #ffff;
     font-weight: 600;
     letter-spacing: 0.5px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .box-price .btn-section a:hover {
@@ -1172,7 +1153,7 @@ section.price-tab .box-price:hover svg {
     font-size: 18px;
     padding: 8px 40px;
     border: 1px solid #ff0b00;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .tab-section:hover .btn-section {
@@ -1181,7 +1162,7 @@ section.price-tab .box-price:hover svg {
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease-in-out;
-    transform: translateY(0%);
+    transform: translateY(0%)
 }
 
 .box-price .btn-section a:hover {
@@ -1190,7 +1171,7 @@ section.price-tab .box-price:hover svg {
     font-size: 18px;
     padding: 8px 40px;
     border: 1px solid #ff0b00;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .tab-section .btn-section:hover a {
@@ -1201,29 +1182,29 @@ section.price-tab .box-price:hover svg {
     border: 1px solid #ffce24;
     color: #000;
     font-weight: 700;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .tab-section:hover .box-title h4 {
     left: 61%;
     font-size: 7em;
     color: rgb(255 255 255 / 20%);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .prices_Sec {
     position: relative;
     margin: 0;
     padding: 50px 0px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
 }
 
 .prices_Sec h4 {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .custom-software h2 {
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .box-price .pakes-area p {
@@ -1232,30 +1213,30 @@ section.price-tab .box-price:hover svg {
     font-size: 14px;
     line-height: 25px;
     margin: 0px 0px 15px;
-    padding: 0;
+    padding: 0
 }
 
 .box-price .pakes-area::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+    background-color: #fff
 }
 
 .box-price .pakes-area::-webkit-scrollbar {
     width: 2px;
-    background-color: #fff;
+    background-color: #fff
 }
 
 .box-price .pakes-area::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #ffff;
-    border: 2px solid #ff6500;
+    border: 2px solid #ff6500
 }
 
 .prices_Sec h4.titlesection {
     margin-bottom: 40px;
     position: relative;
     overflow: hidden;
-    line-height: 75px;
+    line-height: 75px
 }
 
 .box-price:before {
@@ -1266,11 +1247,8 @@ section.price-tab .box-price:hover svg {
     position: absolute;
     left: 0;
     top: 0;
-    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0)
 }
-
-
-/*-- why choices us --*/
 
 .whychociesus {
     padding: 50px 0px 50px !important;
@@ -1279,13 +1257,13 @@ section.price-tab .box-price:hover svg {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top, center;
-    background-blend-mode: difference;
+    background-blend-mode: difference
 }
 
 .whychociesus h2 {
     color: #fff;
     margin-bottom: 50px;
-    display: inline-block;
+    display: inline-block
 }
 
 .whychociesus .box-whych {
@@ -1296,15 +1274,15 @@ section.price-tab .box-price:hover svg {
     background: #ffffff17;
     cursor: pointer;
     transition: 0.5s all linear;
-    box-shadow: 0 0 10px #00000026;
+    box-shadow: 0 0 10px #00000026
 }
 
-.whychociesus .box-whych h5 {
+.whychociesus .box-whych h2 {
     font-size: 20px;
     font-weight: 700;
     font-family: 'latobold';
     color: #222;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .whychociesus .box-whych p {
@@ -1315,18 +1293,15 @@ section.price-tab .box-price:hover svg {
     text-align: justify;
     color: #222;
     font-weight: 500;
-    font-family: 'latoregular';
+    font-family: 'latoregular'
 }
 
 .whychociesus .box-whych:hover {
     transition: 0.5s all linear;
     transform: scale(1.1);
     box-shadow: 0 5px 10px #0000004f;
-    background: #ffffff3b;
+    background: #ffffff3b
 }
-
-
-/*-- footer --*/
 
 .contac-us {
     margin: 0;
@@ -1337,7 +1312,7 @@ section.price-tab .box-price:hover svg {
     background-repeat: no-repeat;
     background-position: top, center;
     position: relative;
-    z-index: 2;
+    z-index: 2
 }
 
 .contac-us:before {
@@ -1349,7 +1324,7 @@ section.price-tab .box-price:hover svg {
     height: 100%;
     background: #070225;
     opacity: 0.5;
-    z-index: -1;
+    z-index: -1
 }
 
 .contac-us .quick-box {
@@ -1363,7 +1338,7 @@ section.price-tab .box-price:hover svg {
     float: right;
     position: relative;
     z-index: 9;
-    margin-top: -200px;
+    margin-top: -200px
 }
 
 .contac-us .quick-box h6 {
@@ -1372,7 +1347,7 @@ section.price-tab .box-price:hover svg {
     line-height: 36px;
     font-family: 'latoregular';
     margin-bottom: 40px;
-    font-weight: 800;
+    font-weight: 800
 }
 
 .contac-us .quick-box .form-group {
@@ -1380,7 +1355,7 @@ section.price-tab .box-price:hover svg {
     margin-bottom: 40px;
     width: 100%;
     position: relative;
-    display: inline-block;
+    display: inline-block
 }
 
 .contac-us .quick-box .form-group label {
@@ -1391,7 +1366,7 @@ section.price-tab .box-price:hover svg {
     font-family: var(--font-family-medium);
     font-weight: 400;
     max-width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 .quick-box .form-group .form-control {
@@ -1407,7 +1382,7 @@ section.price-tab .box-price:hover svg {
     border: unset;
     border-bottom: 1px solid #000;
     border-radius: unset;
-    font-size: 15px;
+    font-size: 15px
 }
 
 .fromzon {
@@ -1415,7 +1390,7 @@ section.price-tab .box-price:hover svg {
     margin: 0;
     padding: 0;
     display: inline-block;
-    width: 100%;
+    width: 100%
 }
 
 .fromzon .form-group {
@@ -1423,21 +1398,21 @@ section.price-tab .box-price:hover svg {
     max-width: calc(95% / 2);
     margin: 0;
     padding: 0;
-    display: inline-block;
+    display: inline-block
 }
 
 .quick-box .form-group:nth-child(even) {
-    margin-left: 15px;
+    margin-left: 15px
 }
 
 .contac-us .quick-box .form-group.fullsection {
     width: 100%;
     max-width: 100%;
-    position: relative;
+    position: relative
 }
 
 .contac-us .quick-box .form-group.fullsection textarea {
-    height: 100px;
+    height: 100px
 }
 
 .contac-us .quick-box .btnsection button {
@@ -1452,27 +1427,27 @@ section.price-tab .box-price:hover svg {
     position: relative;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .contac-us .quick-box .btnsection button i {
     font-size: 35px;
     font-weight: 600;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 .contac-us .quick-box .btnsection {
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    right: 20px
 }
 
 .textformsec {
     position: relative;
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100%
 }
 
 .textformsec h4 {
@@ -1482,7 +1457,7 @@ section.price-tab .box-price:hover svg {
     text-transform: uppercase;
     display: block;
     margin-bottom: 5px;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .textformsec h5 {
@@ -1493,7 +1468,7 @@ section.price-tab .box-price:hover svg {
     font-size: 45px;
     font-weight: 700;
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .textformsec p {
@@ -1501,11 +1476,8 @@ section.price-tab .box-price:hover svg {
     line-height: 30px;
     font-size: 17px;
     text-align: justify;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
-
-
-/*-- copyright -*/
 
 .copyright {
     position: relative;
@@ -1513,7 +1485,7 @@ section.price-tab .box-price:hover svg {
     padding: 5px 0px;
     display: inline-block;
     width: 100%;
-    background: #222;
+    background: #222
 }
 
 .copyright p {
@@ -1522,31 +1494,28 @@ section.price-tab .box-price:hover svg {
     padding: 0;
     font-size: 16px;
     font-weight: 600;
-    color: #fff;
+    color: #fff
 }
-
-
-/*--testomonial--*/
 
 .testomonial {
     margin: 0px auto;
     padding: 40px 0px 30px;
-    width: 100%;
+    width: 100%
 }
 
 .testomonial .testomonial-heading {
     text-align: center;
     margin: 0px;
-    padding: 0px 0px 30px;
+    padding: 0px 0px 30px
 }
 
 .testomonial .testomonial-heading h3 {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .testomonial .testomonial-heading h3 span {
-    color: #F8991B;
+    color: #F8991B
 }
 
 .testomonial .testomonial-box {
@@ -1557,7 +1526,7 @@ section.price-tab .box-price:hover svg {
     position: relative;
     width: 100%;
     margin: 20px 0px 30px;
-    height: 400px;
+    height: 400px
 }
 
 .testomonial .testomonial-box ul {
@@ -1567,7 +1536,7 @@ section.price-tab .box-price:hover svg {
     width: 100%;
     align-items: center;
     justify-content: flex-start;
-    gap: 2px;
+    gap: 2px
 }
 
 .testomonial .testomonial-box ul li {
@@ -1575,7 +1544,7 @@ section.price-tab .box-price:hover svg {
     width: max-content;
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none
 }
 
 .testomonial .testomonial-box p {
@@ -1583,7 +1552,7 @@ section.price-tab .box-price:hover svg {
     color: #8c8c8c;
     margin: 00px 0px 30px;
     line-height: 25px;
-    text-align: justify;
+    text-align: justify
 }
 
 .testomonial .testomonial-box img {
@@ -1592,7 +1561,7 @@ section.price-tab .box-price:hover svg {
     border: 5px solid #fff;
     box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
-    display: inline-block !important;
+    display: inline-block !important
 }
 
 .testomonial .testomonial-box h3 {
@@ -1601,7 +1570,7 @@ section.price-tab .box-price:hover svg {
     position: relative;
     width: max-content;
     display: inline-block;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .imgtex {
@@ -1611,7 +1580,7 @@ section.price-tab .box-price:hover svg {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 10px
 }
 
 .textformsec ul {
@@ -1619,14 +1588,14 @@ section.price-tab .box-price:hover svg {
     margin: 0;
     padding: 0;
     display: inline-block;
-    width: 100%;
+    width: 100%
 }
 
 .textformsec ul li {
     display: inline-block;
     width: 100%;
     position: relative;
-    margin-bottom: 14px;
+    margin-bottom: 14px
 }
 
 .textformsec ul li a {
@@ -1639,7 +1608,7 @@ section.price-tab .box-price:hover svg {
     padding: 0;
     font-size: 17px;
     gap: 10px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .textformsec ul li a span {
@@ -1652,5 +1621,5 @@ section.price-tab .box-price:hover svg {
     justify-content: center;
     color: #fff;
     text-align: center;
-    font-size: 13px;
+    font-size: 13px
 }
