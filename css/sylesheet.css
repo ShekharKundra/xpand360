@@ -1275,7 +1275,7 @@ section.price-tab .box-price:hover svg {
 .whychociesus {
     padding: 50px 0px 50px !important;
     margin: 0px;
-    background: #1a1348 url(../Images/backgroundSquaresMalibuBlue.jpg);
+    background: #1a1348 url("../Images/backgroundSquaresMalibuBlue.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top, center;
@@ -1303,7 +1303,7 @@ section.price-tab .box-price:hover svg {
     font-size: 20px;
     font-weight: 700;
     font-family: 'latobold';
-    color: #000;
+    color: #222;
     margin-bottom: 15px;
 }
 
@@ -1331,7 +1331,7 @@ section.price-tab .box-price:hover svg {
 .contac-us {
     margin: 0;
     padding: 50px 0px 50px;
-    background: #1a1348 url(../Images/inq-bg-01.webp);
+    background: #1a1348 url("../Images/inq-bg-01.webp");
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
