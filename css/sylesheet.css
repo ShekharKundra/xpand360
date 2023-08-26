@@ -344,7 +344,8 @@ nav ul li ul li a span {
     object-fit: cover;
     object-position: center;
     width: 100%;
-    display: block
+    display: block;
+    height: unset !important;
 }
 
 .widget-textArea {
@@ -781,7 +782,8 @@ nav ul li ul li a span {
     top: 30px
 }
 
-.aboutus h5 {
+.aboutus h5,
+.aboutus h2 {
     margin-top: 20px;
     font-weight: 700
 }
@@ -975,7 +977,7 @@ section.price-tab .box-price:hover svg {
     transition: all 0.3s ease-in-out
 }
 
-.box-price .box-title h4 {
+.box-price .box-title h2 {
     z-index: 1;
     position: absolute;
     top: 95px;
@@ -1185,7 +1187,7 @@ section.price-tab .box-price:hover svg {
     transition: all 0.3s ease-in-out
 }
 
-.tab-section:hover .box-title h4 {
+.tab-section:hover .box-title h2 {
     left: 61%;
     font-size: 7em;
     color: rgb(255 255 255 / 20%);
