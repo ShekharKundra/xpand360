@@ -196,7 +196,7 @@ nav ul li ul {
     transition: 0.5s all linear;
     position: absolute;
     top: 100%;
-    width: 250px;
+    width: 300px;
     padding: 10px 0px;
     z-index: 2;
     left: -20px
@@ -217,11 +217,11 @@ nav ul li ul li {
 }
 
 nav ul li ul li a {
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 400;
     transition: 0.5s all linear;
     color: #000;
-    font-family: 'Poppins';
+    font-family: 'latoregular';
     letter-spacing: 0.3px;
     text-transform: capitalize;
     display: flex;
@@ -1649,6 +1649,7 @@ section.price-tab .box-price:hover svg {
 
 .textformsec ul li .socialmedia a:last-child span {
     font-size: 20px;
+    background: #198754;
 }
 
 .custom-software ul li a i {
