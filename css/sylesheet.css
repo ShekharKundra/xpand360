@@ -1511,11 +1511,12 @@ section.price-tab .box-price:hover svg {
 
 .testomonial .testomonial-heading h3 {
     font-size: 30px;
-    font-weight: 700
+    font-weight: 700;
+    color: #000000;
 }
 
 .testomonial .testomonial-heading h3 span {
-    color: #F8991B
+    color: #F8991B;
 }
 
 .testomonial .testomonial-box {
