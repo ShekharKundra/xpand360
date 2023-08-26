@@ -475,7 +475,8 @@ nav ul li ul li a span {
     border-radius: 4px 0 0 4px;
     margin-right: 0;
     display: block;
-    transition: 0.5s all linear
+    transition: 0.5s all linear;
+    font-family: 'latoregular';
 }
 
 .services_Sec .tabs-right>li>a {
@@ -522,8 +523,7 @@ nav ul li ul li a span {
 .services_Sec ul li a {
     display: block;
     font-size: 15px;
-    color: #757575;
-    font-family: 'Roboto';
+    color: #222;
     font-weight: 500;
     line-height: 40px;
     transition: 0.5s all linear
@@ -627,9 +627,9 @@ nav ul li ul li a span {
 .whychociesus h2 {
     font-size: 45px;
     font-weight: 700;
-    margin: 0px 0px 30px;
+    margin: 0px 0px 30px !important;
     text-align: center;
-    color: #000
+    color: #000 !important;
 }
 
 .custom-software p {
@@ -661,7 +661,8 @@ nav ul li ul li a span {
     box-shadow: 0px 0px 10px #00000014;
     background: #fff;
     border-radius: 4px;
-    cursor: pointer
+    cursor: pointer;
+    position: relative;
 }
 
 .custom-software ul li a {
@@ -785,7 +786,8 @@ nav ul li ul li a span {
 .aboutus h5,
 .aboutus h2 {
     margin-top: 20px;
-    font-weight: 700
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .text-are {
@@ -1000,10 +1002,10 @@ section.price-tab .box-price:hover svg {
     margin: 0;
     padding: 0;
     text-align: left;
-    color: #ffffff;
+    color: #ffffff !important;
     font-weight: 700;
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
     line-height: 30px;
     transition: all 0.3s ease-in-out
 }
@@ -1061,7 +1063,7 @@ section.price-tab .box-price:hover svg {
     padding: 0;
     font-size: 14px;
     color: #ffffff;
-    font-weight: 300;
+    font-weight: 700;
     margin-top: 10px;
     width: max-content;
     display: inline-block;
@@ -1202,7 +1204,7 @@ section.price-tab .box-price:hover svg {
 }
 
 .prices_Sec h4 {
-    margin-bottom: 20px
+    margin-bottom: 50px !important;
 }
 
 .custom-software h2 {
@@ -1263,8 +1265,8 @@ section.price-tab .box-price:hover svg {
 }
 
 .whychociesus h2 {
-    color: #fff;
-    margin-bottom: 50px;
+    color: #fff !important;
+    margin-bottom: 50px !important;
     display: inline-block
 }
 
@@ -1283,8 +1285,8 @@ section.price-tab .box-price:hover svg {
     font-size: 20px;
     font-weight: 700;
     font-family: 'latobold';
-    color: #222;
-    margin-bottom: 15px
+    color: #222 !important;
+    margin-bottom: 15px !important;
 }
 
 .whychociesus .box-whych p {
@@ -1625,4 +1627,30 @@ section.price-tab .box-price:hover svg {
     color: #fff;
     text-align: center;
     font-size: 13px
+}
+
+.headingtitle {
+    color: #000000 !important;
+    font-size: 35px !important;
+    font-weight: 700 !important;
+    margin: 0px 0px 30px !important;
+    text-align: center !important;
+}
+
+.headingtitle span {
+    color: #F8991B;
+}
+
+.textformsec ul li .socialmedia {
+    display: flex;
+    gap: 20px;
+}
+
+.textformsec ul li .socialmedia a:last-child span {
+    font-size: 20px;
+}
+
+.custom-software ul li a i {
+    position: absolute;
+    bottom: 10px;
 }
