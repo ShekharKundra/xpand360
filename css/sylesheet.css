@@ -276,8 +276,8 @@ nav ul li ul li a span {
 }
 
 .slider .banrcntprd h2 {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 50px;
     text-align: left;
     width: 100%;
     color: #1a1348;
@@ -630,7 +630,7 @@ nav ul li ul li a span {
     font-weight: 700;
     margin: 0px 0px 30px !important;
     text-align: center;
-    color: #000 !important;
+    color: #000;
 }
 
 .custom-software p {
@@ -987,7 +987,7 @@ section.price-tab .box-price:hover svg {
     left: 85%;
     margin: 0;
     padding: 0;
-    font-size: 15em;
+    font-size: 15em !important;
     color: rgb(255 255 255 / 13%);
     transition: 0.2s;
     width: 100%;
@@ -1191,8 +1191,8 @@ section.price-tab .box-price:hover svg {
 }
 
 .tab-section:hover .box-title h2 {
-    left: 61%;
-    font-size: 7em;
+    left: 21%;
+    font-size: 7em !important;
     color: rgb(255 255 255 / 20%);
     transition: all 0.3s ease-in-out
 }
