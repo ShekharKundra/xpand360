@@ -1525,7 +1525,7 @@ section.price-tab .box-price:hover svg {
 }
 
 .testomonial .testomonial-box {
-    background-color: #fff;
+    background-color: #FFFFFF;
     box-shadow: 0px 5px 15px 0 rgb(0 0 0 / 12%);
     border-radius: 10px;
     padding: 30px;
@@ -1555,10 +1555,10 @@ section.price-tab .box-price:hover svg {
 
 .testomonial .testomonial-box p {
     font-size: 15px;
-    color: #8c8c8c;
     margin: 00px 0px 30px;
     line-height: 25px;
-    text-align: justify
+    text-align: justify;
+    color: #333333;
 }
 
 .testomonial .testomonial-box img {

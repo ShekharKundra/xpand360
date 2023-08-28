@@ -31,7 +31,9 @@ try {
         margin: 0,
         autoplay: true,
         autoplayTimeout: 5000,
-        autoplayHoverPause: true
+        autoplayHoverPause: true,
+        onInitialized: setAriaLabels
+
     });
 
     // parthner logo
@@ -43,6 +45,7 @@ try {
         autoplay: true,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
+        onInitialized: setAriaLabels,
         responsive: {
             0: {
                 items: 4
@@ -65,6 +68,7 @@ try {
         autoplay: true,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
+        onInitialized: setAriaLabels,
         responsive: {
             0: {
                 items: 1
@@ -78,6 +82,17 @@ try {
         }
     });
 
+    // btn name
+    function setAriaLabels(event) {
+        var owl = event.target;
+        var prevButton = $(owl).find('.owl-prev');
+        var nextButton = $(owl).find('.owl-next');
+
+        prevButton.attr('aria-label', 'Previous');
+        nextButton.attr('aria-label', 'Next');
+    }
+
+
     // Cout number
     $('.count').each(function() {
         $(this).prop('Counter', 0).animate({
@@ -90,6 +105,8 @@ try {
             }
         });
     });
+
+
 } catch (error) {
 
 }
