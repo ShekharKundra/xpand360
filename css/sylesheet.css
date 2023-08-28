@@ -910,7 +910,7 @@ nav ul li ul li a span {
     display: inline-block;
     animation: animate 5s linear infinite;
     width: 100%;
-    background: #211b1b url("../Images/footer-bg.webp");
+    background: #211b1b url("../Images/footer-bg.png");
     background-blend-mode: multiply;
     transition: all 0.3s ease-in-out;
     height: 550px
@@ -1258,7 +1258,7 @@ section.price-tab .box-price:hover svg {
 .whychociesus {
     padding: 50px 0px 50px !important;
     margin: 0px;
-    background: #1a1348 url("../Images/backgroundSquaresMalibuBlue.webp");
+    background: #1a1348 url("../Images/backgroundSquaresMalibuBlue.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top, center;
@@ -1311,7 +1311,7 @@ section.price-tab .box-price:hover svg {
 .contac-us {
     margin: 0;
     padding: 50px 0px 50px;
-    background: #1a1348 url("../Images/inq-bg-01.webp");
+    background: #1a1348 url("../Images/inq-bg-01.png");
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
