@@ -297,7 +297,7 @@
                 </div>
 
                 <div class="col-md-6 col-sm-12 col-xl-4">
-                    <form action="" method="post" id="contactForm">
+                    <form action="/" method="post" id="contactForm">
                         <div class="row">
                             <h2>Hey! there :) </h2>
                             <div class="from-sectiona">
@@ -311,7 +311,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="PhoneNumber">Phone Number*</label>
-                                    <input type="number" class="form-control" name="PhoneNumber" placeholder="091234 56789">
+                                    <input type="number" class="form-control" name="PhoneNumber" placeholder="Phone Number">
                                 </div>
                                 <div class="form-group">
                                     <label for="Comany">Company</label>
@@ -1102,22 +1102,23 @@
                 "Message": Message.value
             }
 
-
-            // Send data to the server using fetch
-            fetch("http://192.168.1.9:8080/sendcontectform", {
-                    method: "POST",
+            // Use the Fetch API to send the data as a POST request
+            fetch('http://localhost:8080/sendcontectform', {
+                    method: 'POST',
                     headers: {
-                        "Content-Type": "application/json"
+                        'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(userDetails)
+                    body: JSON.stringify(UserDetails)
                 })
-                .then(response => response.json())
-                .then(data => {
-                    console.log("Response from server:", data);
+                .then(response => {
+                    // Handle the response here (e.g., show success message)
+                    console.log('Data sent successfully');
                 })
                 .catch(error => {
-                    console.error("Error:", error);
+                    // Handle errors here (e.g., show error message)
+                    console.error('Error sending data:', error);
                 });
+
         });
     </script>
 
