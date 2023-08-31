@@ -297,7 +297,7 @@
                 </div>
 
                 <div class="col-md-6 col-sm-12 col-xl-4">
-                    <form action="/send_email.php" method="post" id="contactForm" onsubmit="return validateForm();">
+                    <form action="" method="post" id="contactForm">
                         <div class="row">
                             <h2>Hey! there :) </h2>
                             <div class="from-sectiona">
@@ -307,15 +307,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="EmailAddress">Email Address*</label>
-                                    <input type="email" class="form-control" name="email" placeholder="Enter your email">
+                                    <input type="email" class="form-control" name="Email" placeholder="Enter your email">
                                 </div>
                                 <div class="form-group">
                                     <label for="PhoneNumber">Phone Number*</label>
-                                    <input type="number" class="form-control" name="email" placeholder="091234 56789">
+                                    <input type="number" class="form-control" name="PhoneNumber" placeholder="091234 56789">
                                 </div>
                                 <div class="form-group">
                                     <label for="Comany">Company</label>
-                                    <input type="text" class="form-control" name="email" placeholder="Company Name">
+                                    <input type="text" class="form-control" name="Company" placeholder="Company Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="Messae">Message</label>
@@ -1066,7 +1066,7 @@
 
 
     <!-- Script File -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" defer></script>
     <script src="Js/main.js" defer></script>
@@ -1081,6 +1081,46 @@
         gtag('js', new Date());
         gtag('config', 'G-4H0C1QZ9QH');
     </script>
+
+    <script>
+        var Topform = document.getElementById("contactForm");
+        var Name = Topform.querySelector('input[name="Name"]');
+        var Email = Topform.querySelector('input[name="Email"]');
+        var PhoneNumber = Topform.querySelector('input[name="PhoneNumber"]');
+        var Company = Topform.querySelector('input[name="Company"]');
+        var Message = Topform.querySelector('textarea[name="Message"]');
+        var SendBtn = document.getElementById("bottomfrom");
+
+        SendBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            var UserDetails = {
+                "Name": Name.value,
+                "Email": Email.value,
+                "PhoneNumber": PhoneNumber.value,
+                "Company": Company.value,
+                "Message": Message.value
+            }
+
+
+            // Send data to the server using fetch
+            fetch("http://192.168.1.9:8080/sendcontectform", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(userDetails)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Response from server:", data);
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+        });
+    </script>
+
 </body>
 
 </html>
