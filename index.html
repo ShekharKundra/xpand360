@@ -303,15 +303,18 @@
                             <div class="from-sectiona">
                                 <div class="form-group">
                                     <label for="YourName">Your Name*</label>
-                                    <input type="text" class="form-control" name="Name" placeholder="Enter your name">
+                                    <input type="text" class="form-control" name="Name" placeholder="Enter your name" required>
+                                    <span class="error" id="nameError"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="EmailAddress">Email Address*</label>
-                                    <input type="email" class="form-control" name="Email" placeholder="Enter your email">
+                                    <input type="email" class="form-control" name="Email" placeholder="Enter your email" required>
+                                    <span class="error" id="emailError"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="PhoneNumber">Phone Number*</label>
-                                    <input type="number" class="form-control" name="PhoneNumber" placeholder="Phone Number">
+                                    <input type="number" class="form-control" name="PhoneNumber" placeholder="Phone Number" required>
+                                    <span class="error" id="numberError"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="Comany">Company</label>
@@ -1024,15 +1027,18 @@
                             <div class="fromzon">
                                 <div class="form-group">
                                     <label for="YourName">Your Name*</label>
-                                    <input type="text" class="form-control" name="Name" placeholder="Enter Your Name">
+                                    <input type="text" class="form-control" name="Name" placeholder="Enter Your Name" required>
+                                    <span class="error" id="nameError"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="EmailAddress">Email Address*</label>
-                                    <input type="email" class="form-control" name="Email" placeholder="Enter Your Email">
+                                    <input type="email" class="form-control" name="Email" placeholder="Enter Your Email" required>
+                                    <span class="error" id="emailError"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="PhoneNumber">Phone Number*</label>
-                                    <input type="number" class="form-control" name="PhoneNumber" placeholder="Enter Your Number">
+                                    <input type="number" class="form-control" name="PhoneNumber" placeholder="Enter Your Number" required>
+                                    <span class="error" id="numberError"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="Company">Company</label>
@@ -1069,6 +1075,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" defer></script>
     <script src="Js/main.js" defer></script>
+    <script src="js/FormDaata.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <!-- <script src="js/site-protection.js" defer></script> -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4H0C1QZ9QH" defer></script>
     <script>
@@ -1079,62 +1088,6 @@
         }
         gtag('js', new Date());
         gtag('config', 'G-4H0C1QZ9QH');
-    </script>
-
-    <script>
-        function sendData(formData, successCallback, errorCallback) {
-            fetch('http://localhost:8080/sendcontectform', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                })
-                .then(response => {
-                    if (response.ok) {
-                        successCallback();
-                    } else {
-                        errorCallback('Failed to send data');
-                    }
-                })
-                .catch(error => {
-                    errorCallback(error);
-                });
-        }
-
-        function handleSubmitForm(formId, successMessage) {
-            var form = document.getElementById(formId);
-            var name = form.querySelector('input[name="Name"]');
-            var email = form.querySelector('input[name="Email"]');
-            var phoneNumber = form.querySelector('input[name="PhoneNumber"]');
-            var company = form.querySelector('input[name="Company"]');
-            var message = form.querySelector('textarea[name="Message"]');
-            var sendBtn = form.querySelector('.submit-btn');
-
-            sendBtn.addEventListener("click", function(e) {
-                e.preventDefault();
-
-                var userDetails = {
-                    "Name": name.value,
-                    "Email": email.value,
-                    "PhoneNumber": phoneNumber.value,
-                    "Company": company.value,
-                    "Message": message.value
-                };
-
-                sendData(
-                    userDetails,
-                    function() {
-                        console.log(successMessage);
-                    },
-                    function(error) {
-                        console.error('Error sending data:', error);
-                    }
-                );
-            });
-        }
-        handleSubmitForm("contactForm", "Data sent successfully (Top Form)");
-        handleSubmitForm("contactFormFooter", "Data sent successfully (Footer Form)");
     </script>
 
 </body>
