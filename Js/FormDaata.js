@@ -1,1 +1,55 @@
-try{function sendData(e,t,n){fetch("http://localhost:8080/sendcontectform",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(e)}).then((e=>{e.ok?t():n("Failed to send data")})).catch((e=>{n(e)}))}function handleSubmitForm(e,t){var n=document.getElementById(e),o=n.querySelector('input[name="Name"]'),a=n.querySelector('input[name="Email"]'),r=n.querySelector('input[name="PhoneNumber"]'),c=n.querySelector('input[name="Company"]'),u=n.querySelector('textarea[name="Message"]');n.querySelector(".submit-btn").addEventListener("click",(function(e){e.preventDefault(),sendData({Name:o.value,Email:a.value,PhoneNumber:r.value,Company:c.value,Message:u.value},(function(){console.log(t)}),(function(e){console.error("Error sending data:",e)}))}))}handleSubmitForm("contactForm","Data sent successfully (Top Form)"),handleSubmitForm("contactFormFooter","Data sent successfully (Footer Form)")}catch(e){}
+function sendData(formData, successCallback, errorCallback) {
+    fetch('http://localhost:8080/sendcontectform', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (response.ok) {
+                successCallback(); // Call the success callback
+            } else {
+                errorCallback('Failed to send data');
+            }
+        })
+        .catch(error => {
+            errorCallback(error);
+        });
+}
+
+function handleSubmitForm(formId, successMessage) {
+    var form = document.getElementById(formId);
+    var name = form.querySelector('input[name="Name"]');
+    var email = form.querySelector('input[name="Email"]');
+    var phoneNumber = form.querySelector('input[name="PhoneNumber"]');
+    var company = form.querySelector('input[name="Company"]');
+    var message = form.querySelector('textarea[name="Message"]');
+    var sendBtn = form.querySelector('.submit-btn');
+
+    sendBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        var userDetails = {
+            "Name": name.value,
+            "Email": email.value,
+            "PhoneNumber": phoneNumber.value,
+            "Company": company.value,
+            "Message": message.value
+        };
+
+        sendData(
+            userDetails,
+            function() {
+                console.log(successMessage);
+                location.reload(); // Reload the page
+            },
+            function(error) {
+                console.error('Error sending data:', error);
+            }
+        );
+    });
+}
+
+handleSubmitForm("contactForm", "Data sent successfully (Top Form)");
+handleSubmitForm("contactFormFooter", "Data sent successfully (Footer Form)");
