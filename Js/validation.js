@@ -48,6 +48,7 @@ function updateSubmitButtonAndErrors(form, sendBtn) {
 function handleSubmitForm(formId, successMessage) {
     var form = document.getElementById(formId);
     var sendBtn = form.querySelector('.submit-btn');
+    var successMsg = form.querySelector('.success-message');
 
     updateSubmitButtonAndErrors(form, sendBtn);
 
@@ -76,6 +77,7 @@ function handleSubmitForm(formId, successMessage) {
             userDetails,
             function() {
                 console.log(successMessage);
+                successMsg.textContent = "Data saved successfully.";
                 location.reload(); // Reload the page
             },
             function(error) {
