@@ -1020,23 +1020,23 @@
                 <div class="col-md-7 col-sm-12  col-xl-6">
                     <div class="quick-box">
                         <h6>Hey! there :) </h6>
-                        <form action="send_email.php" method="post" id="contactForm" onsubmit="return validateForm();">
+                        <form action="/" method="post" id="contactForm">
                             <div class="fromzon">
                                 <div class="form-group">
                                     <label for="YourName">Your Name*</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your Name">
+                                    <input type="text" class="form-control" name="YourName" placeholder="Enter Your Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="EmailAddress">Email Address*</label>
-                                    <input type="email" class="form-control" placeholder="Enter Your Email">
+                                    <input type="email" class="form-control" name="EmailAddress" placeholder="Enter Your Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="PhoneNumber">Phone Number*</label>
-                                    <input type="number" class="form-control" placeholder="Enter Your Number">
+                                    <input type="number" class="form-control" name="PhoneNumber" placeholder="Enter Your Number">
                                 </div>
                                 <div class="form-group">
                                     <label for="Company">Company</label>
-                                    <input type="text" class="form-control" placeholder="Company Name">
+                                    <input type="text" class="form-control" name="Company" placeholder="Company Name">
                                 </div>
                                 <div class="form-group fullsection">
                                     <label for="Messae">Message*</label>
@@ -1046,10 +1046,9 @@
                                     <button class="submit-btn" value="Submit" type="submit" id="submitQuickInq" name="submitQuickInq" aria-label="submitQuickInq"><i
                                             class="far fa-paper-plane"></i></button>
                                 </div>
-
                             </div>
+                        </form>
                     </div>
-
                 </div>
             </div>
         </div>
