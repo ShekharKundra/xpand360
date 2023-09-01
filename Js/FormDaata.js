@@ -1,5 +1,5 @@
 function sendData(formData, successCallback, errorCallback) {
-    fetch('http://localhost:1234/sendcontectform', {
+    fetch('http://localhost:8080/sendcontectform', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
