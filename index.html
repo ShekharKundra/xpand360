@@ -334,7 +334,7 @@
                     </div>
 
                     <div class="col-md-6 col-sm-12 col-xl-4">
-                        <form action="/send_email.php" method="post" id="contactForm" onsubmit="return validateForm();">
+                        <form action="" method="post" id="contactForm">
                             <div class="row">
                                 <h2>Hey! there :) </h2>
                                 <div class="from-sectiona">
@@ -345,17 +345,18 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="EmailAddress">Email Address*</label>
-                                        <input type="email" class="form-control" name="email"
+                                        <input type="email" class="form-control" name="Email"
                                             placeholder="Enter your email">
                                     </div>
                                     <div class="form-group">
                                         <label for="PhoneNumber">Phone Number*</label>
-                                        <input type="number" class="form-control" name="email"
+                                        <input type="number" class="form-control" name="PhoneNumber"
                                             placeholder="091234 56789">
                                     </div>
                                     <div class="form-group">
                                         <label for="Comany">Company</label>
-                                        <input type="text" class="form-control" name="email" placeholder="Company Name">
+                                        <input type="text" class="form-control" name="Company"
+                                            placeholder="Company Name">
                                     </div>
                                     <div class="form-group">
                                         <label for="Messae">Message</label>
@@ -368,7 +369,6 @@
                                                 class="far fa-paper-plane"></i></button>
                                     </div>
                                 </div>
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -992,8 +992,8 @@
                                 </ul>
                                 <p>"I have had the best time working with the Cotask team! Their unmatched customer
                                     service and attention to the particular requirements of our organization are
-                                    examples of their dedication and passion for what they do. We anticipate
-                                    a successful and lasting connection."</p>
+                                    examples of their dedication and passion for what they do. We
+                                    anticipate a successful and lasting connection."</p>
                                 <div class="imgtex">
                                     <img src="Images/user.png" alt="Chirag Cooper Images">
                                     <h3>Chirag Cooper</h3>
@@ -1011,8 +1011,8 @@
                                 </ul>
                                 <p>"These guys are amazing. They have assisted us in expanding our firm, and now the
                                     biggest issue we are experiencing is having too much business, which is the ideal
-                                    situation. Thrive made it possible for us to be exactly where
-                                    we wanted to be. Thank you, guys."</p>
+                                    situation. Thrive made it possible for us to be exactly
+                                    where we wanted to be. Thank you, guys."</p>
                                 <div class="imgtex"><img src="Images/user.png" alt="Ajay Malik Images">
                                     <h3>Ajay Malik</h3>
                                 </div>
@@ -1137,7 +1137,7 @@
 
 
         <!-- Script File -->
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" defer></script>
         <script src="Js/main.js" defer></script>
@@ -1152,6 +1152,50 @@
             gtag('js', new Date());
             gtag('config', 'G-4H0C1QZ9QH');
         </script>
+
+        <script>
+            var Topform = document.getElementById("contactForm");
+            var Name = Topform.querySelector('input[name="Name"]');
+            var Email = Topform.querySelector('input[name="Email"]');
+            var PhoneNumber = Topform.querySelector('input[name="PhoneNumber"]');
+            var Company = Topform.querySelector('input[name="Company"]');
+            var Message = Topform.querySelector('textarea[name="Message"]');
+            var SendBtn = document.getElementById("bottomfrom");
+
+            SendBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                var UserDetails = {
+
+                    "Name": Name.value,
+                    "Email": Email.value,
+                    "PhoneNumber": PhoneNumber.value,
+                    "Company": Company.value,
+                    "Message": Message.value
+                }
+                console.log("🚀 ~ file: index.html:1169 ~ UserDetails:", UserDetails)
+
+                // Send data to the server using fetch
+                fetch("http://localhost:1234/sendcontectform", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(userDetails)
+
+
+                })
+                    .then(response => response.json())
+                    .then(data => {
+
+                        console.log("Response from server:", data);
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                    });
+            });
+        </script>
+
     </body>
 
 </html>
