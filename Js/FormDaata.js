@@ -1,11 +1,11 @@
 function sendData(formData, successCallback, errorCallback) {
     fetch('http://taxmanagercoin1-env.eba-yhppuvfm.ap-south-1.elasticbeanstalk.com/sendcontectform', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
         .then(response => {
             if (response.ok) {
                 successCallback(); // Call the success callback
@@ -28,12 +28,12 @@ function handleSubmitForm(formId, successMessage) {
     var sendBtn = form.querySelector('.submit-btn');
     var redirectUrl = "http://xpand360.com/"
 
-    sendBtn.addEventListener("click", function(e) {
+    sendBtn.addEventListener("click", function (e) {
         e.preventDefault();
 
         var userDetails = {
             "Name": name.value,
-            "Email": email.value,
+            "UEMAIL": email.value,
             "PhoneNumber": phoneNumber.value,
             "Company": company.value,
             "Message": message.value
@@ -41,11 +41,11 @@ function handleSubmitForm(formId, successMessage) {
 
         sendData(
             userDetails,
-            function() {
+            function () {
                 console.log(successMessage);
                 window.location.href = redirectUrl;
             },
-            function(error) {
+            function (error) {
                 console.error('Error sending data:', error);
             }
         );
