@@ -30,14 +30,17 @@ function updateSubmitButtonAndErrors(form, sendBtn) {
 
     if (!isNameValid) {
         nameError.textContent = "Name is required.";
+        nameError.style.display = "block";
     }
 
     if (!isEmailValid) {
         emailError.textContent = "Invalid email address.";
+        emailError.style.display = "block";
     }
 
     if (!isPhoneNumberValid) {
         numberError.textContent = "Invalid phone number.";
+        numberError.style.display = "block";
     }
 
     var isFormValid = isNameValid && isEmailValid && isPhoneNumberValid;
@@ -48,7 +51,6 @@ function updateSubmitButtonAndErrors(form, sendBtn) {
 function handleSubmitForm(formId, successMessage) {
     var form = document.getElementById(formId);
     var sendBtn = form.querySelector('.submit-btn');
-    var successMsg = form.querySelector('.success-message');
 
     updateSubmitButtonAndErrors(form, sendBtn);
 
@@ -77,7 +79,6 @@ function handleSubmitForm(formId, successMessage) {
             userDetails,
             function() {
                 console.log(successMessage);
-                successMsg.textContent = "Data saved successfully.";
                 location.reload(); // Reload the page
             },
             function(error) {
