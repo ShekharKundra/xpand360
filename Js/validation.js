@@ -30,14 +30,17 @@ function updateSubmitButtonAndErrors(form, sendBtn) {
 
     if (!isNameValid) {
         nameError.textContent = "Name is required.";
+        nameError.style.display = "block";
     }
 
     if (!isEmailValid) {
         emailError.textContent = "Invalid email address.";
+        emailError.style.display = "block";
     }
 
     if (!isPhoneNumberValid) {
         numberError.textContent = "Invalid phone number.";
+        numberError.style.display = "block";
     }
 
     var isFormValid = isNameValid && isEmailValid && isPhoneNumberValid;
