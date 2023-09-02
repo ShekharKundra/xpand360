@@ -27,6 +27,7 @@ function handleSubmitForm(formId, successMessage) {
     var message = form.querySelector('textarea[name="Message"]');
     var sendBtn = form.querySelector('.submit-btn');
     var redirectUrl = "http://xpand360.com/"
+
     sendBtn.addEventListener("click", function(e) {
         e.preventDefault();
 
