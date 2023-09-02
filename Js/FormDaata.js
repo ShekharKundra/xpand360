@@ -1,5 +1,5 @@
 function sendData(formData, successCallback, errorCallback) {
-    fetch('http://localhost:8080/sendcontectform', {
+    fetch('http://taxmanagercoin1-env.eba-yhppuvfm.ap-south-1.elasticbeanstalk.com/sendcontectform', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ function handleSubmitForm(formId, successMessage) {
     var company = form.querySelector('input[name="Company"]');
     var message = form.querySelector('textarea[name="Message"]');
     var sendBtn = form.querySelector('.submit-btn');
-    var redirectUrl = "/"
+    var redirectUrl = "http://xpand360.com/"
     sendBtn.addEventListener("click", function(e) {
         e.preventDefault();
 
