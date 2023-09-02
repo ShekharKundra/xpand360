@@ -1,5 +1,5 @@
 function sendData(formData, successCallback, errorCallback) {
-    fetch('http://localhost:8080/sendcontectform', {
+    fetch('http://taxmanagercoin1-env.eba-yhppuvfm.ap-south-1.elasticbeanstalk.com/sendcontectform', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ function handleSubmitForm(formId, successMessage) {
 
         var userDetails = {
             "Name": name.value,
-            "Email": email.value,
+            "UEMAIL": email.value,
             "PhoneNumber": phoneNumber.value,
             "Company": company.value,
             "Message": message.value
