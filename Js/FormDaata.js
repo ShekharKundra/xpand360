@@ -1,11 +1,11 @@
 function sendData(formData, successCallback, errorCallback) {
     fetch('http://localhost:8080/sendcontectform', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
         .then(response => {
             if (response.ok) {
                 successCallback(); // Call the success callback
@@ -26,8 +26,8 @@ function handleSubmitForm(formId, successMessage) {
     var company = form.querySelector('input[name="Company"]');
     var message = form.querySelector('textarea[name="Message"]');
     var sendBtn = form.querySelector('.submit-btn');
-
-    sendBtn.addEventListener("click", function (e) {
+    var redirectUrl = "/"
+    sendBtn.addEventListener("click", function(e) {
         e.preventDefault();
 
         var userDetails = {
@@ -40,11 +40,11 @@ function handleSubmitForm(formId, successMessage) {
 
         sendData(
             userDetails,
-            function () {
+            function() {
                 console.log(successMessage);
-                location.reload(); // Reload the page
+                window.location.href = redirectUrl;
             },
-            function (error) {
+            function(error) {
                 console.error('Error sending data:', error);
             }
         );

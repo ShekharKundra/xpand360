@@ -1,92 +1,93 @@
-// Function to validate email using a regular expression
-function isValidEmail(email) {
-    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    return emailRegex.test(email);
-}
+document.addEventListener("DOMContentLoaded", function() {
+    // Find the first form and its submit button by their IDs
+    const form1 = document.getElementById("contactForm");
+    const submitButton1 = document.getElementById("bottomfrom");
 
-// Function to validate phone number using a regular expression
-function isValidPhoneNumber(phoneNumber) {
-    const phoneNumberRegex = /^[1-9]\d*$/; // Assuming a positive integer input
-    return phoneNumberRegex.test(phoneNumber);
-}
+    // Add a click event listener to the submit button for the first form
+    submitButton1.addEventListener("click", function(event) {
+        // Get the values of the Name, Email, and Phone Number fields for the first form
+        const name1 = form1.querySelector('input[name="Name"]').value.trim();
+        const email1 = form1.querySelector('input[name="Email"]').value.trim();
+        const phoneNumber1 = form1.querySelector('input[name="PhoneNumber"]').value.trim();
 
-// Function to update submit button status and show error messages
-function updateSubmitButtonAndErrors(form, sendBtn) {
-    var name = form.querySelector('input[name="Name"]');
-    var email = form.querySelector('input[name="Email"]');
-    var phoneNumber = form.querySelector('input[name="PhoneNumber"]');
-    var nameError = form.querySelector('#nameError');
-    var emailError = form.querySelector('#emailError');
-    var numberError = form.querySelector('#numberError');
+        // Initialize flags to check if there are errors for the first form
+        let hasErrors1 = false;
 
-    // Clear previous error messages
-    nameError.textContent = "";
-    emailError.textContent = "";
-    numberError.textContent = "";
+        // Validate Name for the first form
+        if (name1 === "") {
+            document.getElementById("nameError").textContent = "Name is required";
+            hasErrors1 = true;
+        } else {
+            document.getElementById("nameError").textContent = ""; // Clear error
+        }
 
-    var isNameValid = name.value.trim() !== "";
-    var isEmailValid = email.value.trim() !== "" && isValidEmail(email.value);
-    var isPhoneNumberValid = phoneNumber.value.trim() !== "" && isValidPhoneNumber(phoneNumber.value);
+        // Validate Email for the first form using a regular expression
+        const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        if (!emailRegex.test(email1)) {
+            document.getElementById("emailError").textContent = "Invalid email format";
+            hasErrors1 = true;
+        } else {
+            document.getElementById("emailError").textContent = ""; // Clear error
+        }
 
-    if (!isNameValid) {
-        nameError.textContent = "Name is required.";
-    }
+        // Validate Phone Number for the first form using a regular expression
+        const mobileRegex = /^[1-9]\d*$/;
+        if (!mobileRegex.test(phoneNumber1)) {
+            document.getElementById("numberError").textContent = "Invalid phone number format";
+            hasErrors1 = true;
+        } else {
+            document.getElementById("numberError").textContent = ""; // Clear error
+        }
 
-    if (!isEmailValid) {
-        emailError.textContent = "Invalid email address.";
-    }
-
-    if (!isPhoneNumberValid) {
-        numberError.textContent = "Invalid phone number.";
-    }
-
-    var isFormValid = isNameValid && isEmailValid && isPhoneNumberValid;
-    sendBtn.disabled = !isFormValid;
-}
-
-// Function to perform form validation and handle submission
-function handleSubmitForm(formId, successMessage) {
-    var form = document.getElementById(formId);
-    var sendBtn = form.querySelector('.submit-btn');
-    var successMsg = form.querySelector('.success-message');
-
-    updateSubmitButtonAndErrors(form, sendBtn);
-
-    form.addEventListener("input", function() {
-        updateSubmitButtonAndErrors(form, sendBtn);
+        // If there are errors for the first form, prevent the form from submitting
+        if (hasErrors1) {
+            event.preventDefault();
+        }
     });
 
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
+    // Find the second form and its submit button by their IDs
+    const form2 = document.getElementById("contactFormFooter");
+    const submitButton2 = document.getElementById("submitQuickInq");
 
-        var name = form.querySelector('input[name="Name"]').value;
-        var email = form.querySelector('input[name="Email"]').value;
-        var phoneNumber = form.querySelector('input[name="PhoneNumber"]').value;
-        var company = form.querySelector('input[name="Company"]').value;
-        var message = form.querySelector('textarea[name="Message"]').value;
+    // Add a click event listener to the submit button for the second form
+    submitButton2.addEventListener("click", function(event) {
+        // Get the values of the Name, Email, and Phone Number fields for the second form
+        const name2 = form2.querySelector('input[name="Name"]').value.trim();
+        const email2 = form2.querySelector('input[name="Email"]').value.trim();
+        const phoneNumber2 = form2.querySelector('input[name="PhoneNumber"]').value.trim();
 
-        var userDetails = {
-            "Name": name,
-            "Email": email,
-            "PhoneNumber": phoneNumber,
-            "Company": company,
-            "Message": message
-        };
+        // Initialize flags to check if there are errors for the second form
+        let hasErrors2 = false;
 
-        sendData(
-            userDetails,
-            function() {
-                console.log(successMessage);
-                successMsg.textContent = "Data saved successfully.";
-                location.reload(); // Reload the page
-            },
-            function(error) {
-                console.error('Error sending data:', error);
-            }
-        );
+        // Validate Name for the second form
+        if (name2 === "") {
+            document.getElementById("nameError").textContent = "Name is required";
+            hasErrors2 = true;
+        } else {
+            document.getElementById("nameError").textContent = ""; // Clear error
+        }
+
+        // Validate Email for the second form using a regular expression
+        const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        if (!emailRegex.test(email2)) {
+            document.getElementById("emailError").textContent = "Invalid email format";
+            hasErrors2 = true;
+        } else {
+            document.getElementById("emailError").textContent = ""; // Clear error
+        }
+
+        // Validate Phone Number for the second form using a regular expression
+        const mobileRegex = /^[1-9]\d*$/;
+        if (!mobileRegex.test(phoneNumber2)) {
+            document.getElementById("numberError").textContent = "Invalid phone number format";
+            hasErrors2 = true;
+        } else {
+            document.getElementById("numberError").textContent = ""; // Clear error
+        }
+
+        // If there are errors for the second form, prevent the form from submitting
+        if (hasErrors2) {
+            event.preventDefault();
+        }
     });
-}
-
-// Call the validation and submission function for both forms
-handleSubmitForm("contactForm", "Data sent successfully (Top Form)");
-handleSubmitForm("contactFormFooter", "Data sent successfully (Footer Form)");
+});
