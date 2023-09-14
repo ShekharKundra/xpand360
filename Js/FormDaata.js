@@ -1,56 +1,37 @@
-function sendData(formData, successCallback, errorCallback) {
-    fetch('http://taxmanagercoin1-env.eba-yhppuvfm.ap-south-1.elasticbeanstalk.com/sendcontectform', {
-        method: 'POST',
+document.getElementById("contactFormf").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+
+    const name = document.getElementById("uNamef").value;
+    const email = document.getElementById("uEmailf").value;
+    const phone = document.getElementById("uPhoneNumberf").value;
+    const company = document.getElementById("uCompanyf").value;
+    const msg = document.getElementById("uMessagef").value;
+
+    const data = {
+        Name: name,
+        UEMAIL: email,
+        PhoneNumber: phone,
+        Company: company,
+        Message: msg
+    };
+
+
+    //fetch("http://taxmanagercoin1-env.eba-yhppuvfm.ap-south-1.elasticbeanstalk.com/sendcontectform", {
+    fetch("http://localhost:8080/sendcontectform", {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(data)
     })
-        .then(response => {
-            if (response.ok) {
-                successCallback(); // Call the success callback
-            } else {
-                errorCallback('Failed to send data');
-            }
+        .then(response => response.json())
+        .then(data => {
+            // Handle the API response here
+            console.log("API response:", data);
         })
         .catch(error => {
-            errorCallback(error);
+            console.log("Error:", error);
         });
-}
 
-function handleSubmitForm(formId, successMessage) {
-    var form = document.getElementById(formId);
-    var name = form.querySelector('input[name="Name"]');
-    var email = form.querySelector('input[name="Email"]');
-    var phoneNumber = form.querySelector('input[name="PhoneNumber"]');
-    var company = form.querySelector('input[name="Company"]');
-    var message = form.querySelector('textarea[name="Message"]');
-    var sendBtn = form.querySelector('.submit-btn');
-    var redirectUrl = "http://xpand360.com/"
-
-    sendBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        var userDetails = {
-            "Name": name.value,
-            "UEMAIL": email.value,
-            "PhoneNumber": phoneNumber.value,
-            "Company": company.value,
-            "Message": message.value
-        };
-
-        sendData(
-            userDetails,
-            function () {
-                console.log(successMessage);
-                window.location.href = redirectUrl;
-            },
-            function (error) {
-                console.error('Error sending data:', error);
-            }
-        );
-    });
-}
-
-handleSubmitForm("contactForm", "Data sent successfully (Top Form)");
-handleSubmitForm("contactFormFooter", "Data sent successfully (Footer Form)");
+});
