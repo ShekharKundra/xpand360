@@ -1692,3 +1692,10 @@ section.price-tab .box-price:hover svg {
     width: 100%;
     font-size: 12px;
 }
+
+#contactFormTop h2 {
+    font-size: 32px;
+    margin: 0px 0px 30px;
+    padding: 0;
+    font-weight: 900;
+}
