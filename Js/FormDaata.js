@@ -15,7 +15,7 @@ function handleSubmit(event) {
 
     const data = {
         Name: name,
-        UEMAIL: email,
+        Email: email,
         PhoneNumber: phone,
         Company: company,
         Message: msg
