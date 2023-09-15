@@ -21,13 +21,13 @@ function handleSubmit(event) {
         Message: msg
     };
 
-    fetch(`${localUrl}`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
+    fetch(`${OnlineUrl}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
         .then(response => response.json())
         .then(data => {
             // Handle the API response here
@@ -36,6 +36,7 @@ function handleSubmit(event) {
         .catch(error => {
             console.log("Error:", error);
         });
+    window.location.href = "http://www.xpand360.com";
 }
 
 document.getElementById("contactFormf").addEventListener("submit", handleSubmit);
