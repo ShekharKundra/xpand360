@@ -36,7 +36,7 @@ function handleSubmit(event) {
         .catch(error => {
             console.log("Error:", error);
         });
-
+    window.location.href = "http://www.xpand360.com";
 }
 
 document.getElementById("contactFormf").addEventListener("submit", handleSubmit);
