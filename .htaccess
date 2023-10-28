@@ -39,4 +39,6 @@
   # Others
   ExpiresByType application/pdf "access plus 1 year"
   ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+RewriteEngine On 
+  RewriteRule ^(.*)\.html$ /$1 [L,R=301] 
 </IfModule>
